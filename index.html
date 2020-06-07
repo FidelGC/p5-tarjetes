@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetes_flexbox</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            min-height: height: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            background: linear-gradient(38deg, blue, purple);
+            font-family: "Georgia"cursive;
+            font-size: 18px;
+            color: purple;
+        }
+
+        .container {
+            display: flex;
+            /*flex-direction: row; */
+            padding: 2em 4em;
+            justify-content: center;
+        }
+
+        .dissenyador {
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            background: rgba(240, 240, 240, 0.9);
+            border-radius: 20px;
+            margin: 1em;
+            box-shadow: 0 0 20px purple;
+        }
+
+        .dissenyador_img {
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            height: 300px;
+            background: purple;
+            overflow: hidden;
+        }
+
+        .dissenyador_img img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+            filter: grayscale(100%);
+            mix-blend-mode: lighten;
+        }
+
+        .dissenyador:first-child .dissenyador_img img {
+            object-position: center;
+        }
+
+        .dissenyador:last-child .dissenyador_img img {
+            object-position: center;
+        }
+
+        header {
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid purple;
+            align-items: baseline;
+        }
+
+        h3 {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        span {
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+
+        .dissenyador_contingut {
+            text-align: justify;
+            flex-grow: 1;
+            hyphens: auto;
+            margin: 1em 1em 0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+
+        footer {
+            background: purple;
+            color: white;
+            font-size: 0.9em;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding: 0.6em;
+        }
+
+        @media (max-width:600px) {
+            body {
+                font-size: 16px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dissenyador">
+            <div class="dissenyador_img">
+                <img src="img/Casey_Reas.jpg" alt="Casey Reas">
+            </div>
+            <header>
+                <h3>Casey Reas</h3>
+                <span>1972</span>
+            </header>
+            <p class="dissenyador_contingut">Casey Edwin Barker Reas (nacido en 1972), también conocido como C. E. B. Reas o Casey Reas, es un artista estadounidense cuyas obras de arte conceptuales, procesales y mínimas exploran ideas a través de la lente contemporánea del software. Reas es quizás mejor conocido por haber creado, con Ben Fry, el lenguaje de programación Processing.</p>
+            <footer class="dissenyador_peu">
+                Estudió diseño en la Universidad de Cincinnati y luego pasó los siguientes dos años desarrollando software y electrónica como una exploración artística. Mientras estudiaba diseño en Cincinnati, Reas era miembro de una banda llamada 'nancy' con Scott Devendorf y Matt Berninger, quienes se convirtieron en miembros de The National. Reas dirigió cuatro videos musicales para el álbum de la banda 2017, Sleep Well Beast.
+            </footer>
+        </div>
+        <div class="dissenyador">
+            <div class="dissenyador_img">
+                <img src="img/vera.jpg" alt="Vera Molnar">
+            </div>
+            <header>
+                <h3>Vera Molnar</h3>
+                <span>1924</span>
+            </header>
+            <p class="dissenyador_contingut">Vera Molnar nació el 5 de enero de 1924 en Budapest, Hungría. A los 18 años inicia sus estudios de Pintura e Historia del Arte y Estética en la escuela superior de Arte de Budapest. A los 23 años se traslada a Francia donde, hasta el presente ha ejercido su carrera artística.</p>
+            <footer class="dissenyador_peu">Vera Molnar expone actualmente a nivel internacional e intercontinental y es considerada una de las pioneras del arte digital. Sus obras se caracterizan por ser series en la que la figura principal es el cuadrado.</footer>
+        </div>
+    </div>
+</body></html>
